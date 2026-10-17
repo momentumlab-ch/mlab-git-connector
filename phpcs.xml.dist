@@ -24,7 +24,9 @@ Aufruf: vendor/bin/phpcs  (oder phpcs, wenn global installiert)
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="mlab-git-connector" />
+			<property name="text_domain" type="array">
+				<element value="mlab-git-connector" />
+			</property>
 		</properties>
 	</rule>
 </ruleset>
