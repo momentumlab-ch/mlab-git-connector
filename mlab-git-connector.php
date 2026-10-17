@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       MLab Git Connector
+ * Plugin Name:       MomentumLab Git Connector
  * Plugin URI:        https://github.com/momentumlab-ch/mlab-git-connector
  * Description:       Install WordPress plugins directly from a GitHub repository.
  * Version:           1.0.0
