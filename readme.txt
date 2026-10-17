@@ -1,4 +1,4 @@
-=== MLab Git Connector ===
+=== MomentumLab Git Connector ===
 Contributors: momentumlab
 Tags: github, install, plugins, updates
 Requires at least: 6.4

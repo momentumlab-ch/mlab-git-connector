@@ -1,4 +1,4 @@
-# MLab Git Connector
+# MomentumLab Git Connector
 
 WordPress-Plugin, das Plugins und Themes direkt über eine GitHub-URL installiert. Updates laufen danach über den Standard-Updater von WordPress.
 
