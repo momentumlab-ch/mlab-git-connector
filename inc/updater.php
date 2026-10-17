@@ -27,7 +27,7 @@ add_action( 'init', 'mlab_git_connector_register_updater' );
  * Registers the update checker. Private repos need the token constant in wp-config.php.
  */
 function mlab_git_connector_register_updater(): void {
-	$private = true;
+	$private = false;
 	$token   = defined( 'MLAB_GIT_CONNECTOR_GITHUB_TOKEN' ) ? (string) constant( 'MLAB_GIT_CONNECTOR_GITHUB_TOKEN' ) : '';
 
 	if ( $private && '' === $token ) {
