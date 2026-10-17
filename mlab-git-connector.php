@@ -10,6 +10,8 @@
  * License:           GPL-2.0-or-later
  * Text Domain:       mlab-git-connector
  * Update URI:        https://github.com/momentumlab-ch/mlab-git-connector
+ *
+ * @package MlabGitConnector
  */
 
 defined( 'ABSPATH' ) || exit;
