@@ -3,7 +3,7 @@
  * Plugin Name:       MomentumLab Git Connector
  * Plugin URI:        https://github.com/momentumlab-ch/mlab-git-connector
  * Description:       Install WordPress plugins directly from a GitHub repository.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.4
  * Requires PHP:      8.0
  * Author:            MomentumLab
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MLAB_GIT_CONNECTOR_VERSION', '1.0.0' );
+define( 'MLAB_GIT_CONNECTOR_VERSION', '1.0.1' );
 define( 'MLAB_GIT_CONNECTOR_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once MLAB_GIT_CONNECTOR_DIR . 'inc/updater.php';

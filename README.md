@@ -4,7 +4,7 @@ WordPress-Plugin, das Plugins und Themes direkt über eine GitHub-URL installier
 
 ## Status
 
-Version 1.0.0. Installation, Update-Prüfung und Release-Workflow sind umgesetzt. Ein Test auf einer echten WordPress-Site steht noch aus.
+Version 1.0.1. Installation, Update-Prüfung und Release-Workflow sind umgesetzt. Ein Test auf einer echten WordPress-Site steht noch aus.
 
 ## Nutzung
 

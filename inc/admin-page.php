@@ -108,6 +108,8 @@ function mlab_git_connector_render_page() {
 
 			<?php submit_button( __( 'Install', 'mlab-git-connector' ) ); ?>
 		</form>
+
+		<p class="description"><?php esc_html_e( 'Large plugins can take a while. If your server shows a timeout error such as 504, wait a minute and reload this page. The installation may still finish and the result appears here.', 'mlab-git-connector' ); ?></p>
 	</div>
 	<?php
 }

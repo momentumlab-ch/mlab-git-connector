@@ -69,8 +69,10 @@ function mlab_git_connector_request_args( $accept ) {
  * @return array{name: string, url: string}|WP_Error
  */
 function mlab_git_connector_find_release_asset( $owner, $repo ) {
-	$api_url  = sprintf( 'https://api.github.com/repos/%s/%s/releases/latest', rawurlencode( $owner ), rawurlencode( $repo ) );
-	$response = wp_remote_get( $api_url, mlab_git_connector_request_args( 'application/vnd.github+json' ) );
+	$api_url         = sprintf( 'https://api.github.com/repos/%s/%s/releases/latest', rawurlencode( $owner ), rawurlencode( $repo ) );
+	$args            = mlab_git_connector_request_args( 'application/vnd.github+json' );
+	$args['timeout'] = 20;
+	$response        = wp_remote_get( $api_url, $args );
 
 	if ( is_wp_error( $response ) ) {
 		return $response;
@@ -138,12 +140,32 @@ function mlab_git_connector_download_asset( $asset_url ) {
 }
 
 /**
+ * Lets the install finish even if the browser or a gateway gives up first.
+ *
+ * A slow download or unpack can run longer than a server gateway waits. Without this the
+ * visitor sees a 504 and PHP may stop halfway. With it the install completes and the
+ * result is shown on the next page load.
+ *
+ * @return void
+ */
+function mlab_git_connector_extend_limits() {
+	ignore_user_abort( true );
+
+	if ( function_exists( 'set_time_limit' ) ) {
+		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_set_time_limit -- Large ZIPs need more than the default limit.
+		set_time_limit( 300 );
+	}
+}
+
+/**
  * Installs a plugin from a GitHub release through the standard WordPress installer.
  *
  * @param string $url Repository URL entered by the user.
  * @return string|WP_Error Plugin basename on success.
  */
 function mlab_git_connector_install( $url ) {
+	mlab_git_connector_extend_limits();
+
 	$repo = mlab_git_connector_parse_repo_url( $url );
 	if ( is_wp_error( $repo ) ) {
 		return $repo;
