@@ -4,7 +4,7 @@ WordPress-Plugin, das Plugins und Themes direkt über eine GitHub-URL installier
 
 ## Status
 
-Version 1.0.1. Installation, Update-Prüfung und Release-Workflow sind umgesetzt. Ein Test auf einer echten WordPress-Site steht noch aus.
+Version 1.1.0. Installation, Update-Prüfung und Release-Workflow sind umgesetzt. Ein Test auf einer echten WordPress-Site steht noch aus.
 
 ## Nutzung
 
@@ -23,7 +23,8 @@ Das Repo braucht ein Release mit einer ZIP-Datei, die `<slug>.zip` heißt und de
 | Funktions- und Klassen-Präfix | `mlab_git_connector_` / `Mlab_Git_Connector_` |
 | Konstanten-Präfix | `MLAB_GIT_CONNECTOR_` |
 | Token-Konstante für private Repos | `MLAB_GIT_CONNECTOR_GITHUB_TOKEN` (in `wp-config.php`) |
-| Text Domain | `mlab-git-connector` |
+| Text Domain | `mlab-git-connector` (Quelle Englisch, Sprachdatei `de_CH` in `languages/`) |
+| Feste Werte (Timeouts u. a.) | `inc/options.php`, Filter `mlab_git_connector_options` |
 | Update-Quelle | GitHub Releases dieses Repos, über Plugin Update Checker |
 
 ## Entscheidungen
@@ -36,9 +37,8 @@ Das Repo braucht ein Release mit einer ZIP-Datei, die `<slug>.zip` heißt und de
 
 ## Release
 
-1. Version in Header, Konstante `MLAB_GIT_CONNECTOR_VERSION` und `Stable tag` in `readme.txt` erhöhen. Changelog ergänzen.
-2. Nach dem Merge auf `main` den Tag `vX.Y.Z` setzen und pushen.
-3. Die GitHub Action `.github/workflows/release.yml` baut `mlab-git-connector.zip` und hängt es an das Release. Sie prüft Ordnername, Versionen und Konfigurationsdateien.
+1. Version in Header, Konstante `MLAB_GIT_CONNECTOR_VERSION` und `Stable tag` in `readme.txt` erhöhen. Eintrag in `CHANGELOG.md` und im Changelog der `readme.txt` ergänzen.
+2. Nach dem Merge auf `main` erkennt `.github/workflows/release.yml` die neue Version, prüft Ordnername, Versionen und Secrets, baut `mlab-git-connector.zip` und legt das Release `vX.Y.Z` an. Es wird kein Tag von Hand gesetzt.
 
 ## Prüfungen
 

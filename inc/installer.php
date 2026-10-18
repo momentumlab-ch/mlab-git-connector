@@ -57,7 +57,7 @@ function mlab_git_connector_request_args( $accept ) {
 
 	return array(
 		'headers' => $headers,
-		'timeout' => 60,
+		'timeout' => (int) mlab_git_connector_option( 'download_timeout' ),
 	);
 }
 
@@ -71,7 +71,7 @@ function mlab_git_connector_request_args( $accept ) {
 function mlab_git_connector_find_release_asset( $owner, $repo ) {
 	$api_url         = sprintf( 'https://api.github.com/repos/%s/%s/releases/latest', rawurlencode( $owner ), rawurlencode( $repo ) );
 	$args            = mlab_git_connector_request_args( 'application/vnd.github+json' );
-	$args['timeout'] = 20;
+	$args['timeout'] = (int) mlab_git_connector_option( 'lookup_timeout' );
 	$response        = wp_remote_get( $api_url, $args );
 
 	if ( is_wp_error( $response ) ) {
@@ -85,7 +85,7 @@ function mlab_git_connector_find_release_asset( $owner, $repo ) {
 
 	$release = json_decode( wp_remote_retrieve_body( $response ), true );
 	foreach ( isset( $release['assets'] ) && is_array( $release['assets'] ) ? $release['assets'] : array() as $asset ) {
-		if ( isset( $asset['name'], $asset['url'] ) && '.zip' === substr( $asset['name'], -4 ) ) {
+		if ( isset( $asset['name'], $asset['url'] ) && str_ends_with( $asset['name'], (string) mlab_git_connector_option( 'asset_name' ) ) ) {
 			return array(
 				'name' => $asset['name'],
 				'url'  => $asset['url'],
@@ -153,7 +153,7 @@ function mlab_git_connector_extend_limits() {
 
 	if ( function_exists( 'set_time_limit' ) ) {
 		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_set_time_limit -- Large ZIPs need more than the default limit.
-		set_time_limit( 300 );
+		set_time_limit( (int) mlab_git_connector_option( 'time_limit' ) );
 	}
 }
 

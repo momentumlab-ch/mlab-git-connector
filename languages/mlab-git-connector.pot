@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MomentumLab Git Connector 1.1.0\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Please enter an https GitHub address, for example https://github.com/owner/repo."
+msgstr ""
+
+msgid "The address must contain the owner and the repository name."
+msgstr ""
+
+msgid "The owner or repository name contains invalid characters."
+msgstr ""
+
+msgid "The latest release has no ZIP file attached. Attach the plugin ZIP to the release and try again."
+msgstr ""
+
+msgid "No release found. Create a release with the plugin ZIP attached, or check the address. For a private repository, the token must be defined in wp-config.php."
+msgstr ""
+
+msgid "GitHub denied access. For a private repository, check the MLAB_GIT_CONNECTOR_GITHUB_TOKEN constant in wp-config.php."
+msgstr ""
+
+msgid "GitHub answered with status %d. Please try again later."
+msgstr ""
+
+msgid "The plugin ZIP could not be downloaded from GitHub."
+msgstr ""
+
+msgid "WordPress could not install the plugin. Check the ZIP file and the file permissions."
+msgstr ""
+
+msgid "Install from GitHub"
+msgstr ""
+
+msgid "You are not allowed to install plugins."
+msgstr ""
+
+msgid "Plugin installed: %s. You can activate it on the Plugins page."
+msgstr ""
+
+msgid "Enter the GitHub address of the repository. The plugin ZIP attached to its latest release is installed."
+msgstr ""
+
+msgid "GitHub address"
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Large plugins can take a while. If your server shows a timeout error such as 504, wait a minute and reload this page. The installation may still finish and the result appears here."
+msgstr ""
+
+msgid "Updates are not active: the constant MLAB_GIT_CONNECTOR_GITHUB_TOKEN is missing in wp-config.php."
+msgstr ""
