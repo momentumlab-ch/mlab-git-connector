@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MomentumLab Git Connector 1.1.0\n"
+"Language: de_CH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Please enter an https GitHub address, for example https://github.com/owner/repo."
+msgstr "Bitte gib eine GitHub-Adresse mit https ein, zum Beispiel https://github.com/owner/repo."
+
+msgid "The address must contain the owner and the repository name."
+msgstr "Die Adresse muss den Besitzer und den Namen des Repositorys enthalten."
+
+msgid "The owner or repository name contains invalid characters."
+msgstr "Der Besitzer oder der Repository-Name enthält ungültige Zeichen."
+
+msgid "The latest release has no ZIP file attached. Attach the plugin ZIP to the release and try again."
+msgstr "Am neuesten Release hängt keine ZIP-Datei. Hänge das Plugin-ZIP an das Release und versuche es erneut."
+
+msgid "No release found. Create a release with the plugin ZIP attached, or check the address. For a private repository, the token must be defined in wp-config.php."
+msgstr "Kein Release gefunden. Erstelle ein Release mit angehängtem Plugin-ZIP oder prüfe die Adresse. Bei einem privaten Repository muss der Token in wp-config.php definiert sein."
+
+msgid "GitHub denied access. For a private repository, check the MLAB_GIT_CONNECTOR_GITHUB_TOKEN constant in wp-config.php."
+msgstr "GitHub hat den Zugriff verweigert. Prüfe bei einem privaten Repository die Konstante MLAB_GIT_CONNECTOR_GITHUB_TOKEN in wp-config.php."
+
+msgid "GitHub answered with status %d. Please try again later."
+msgstr "GitHub hat mit Status %d geantwortet. Bitte versuche es später erneut."
+
+msgid "The plugin ZIP could not be downloaded from GitHub."
+msgstr "Das Plugin-ZIP konnte nicht von GitHub geladen werden."
+
+msgid "WordPress could not install the plugin. Check the ZIP file and the file permissions."
+msgstr "WordPress konnte das Plugin nicht installieren. Prüfe die ZIP-Datei und die Dateirechte."
+
+msgid "Install from GitHub"
+msgstr "Aus GitHub installieren"
+
+msgid "You are not allowed to install plugins."
+msgstr "Du darfst keine Plugins installieren."
+
+msgid "Plugin installed: %s. You can activate it on the Plugins page."
+msgstr "Plugin installiert: %s. Du kannst es auf der Plugin-Seite aktivieren."
+
+msgid "Enter the GitHub address of the repository. The plugin ZIP attached to its latest release is installed."
+msgstr "Gib die GitHub-Adresse des Repositorys ein. Installiert wird das Plugin-ZIP des neuesten Releases."
+
+msgid "GitHub address"
+msgstr "GitHub-Adresse"
+
+msgid "Install"
+msgstr "Installieren"
+
+msgid "Large plugins can take a while. If your server shows a timeout error such as 504, wait a minute and reload this page. The installation may still finish and the result appears here."
+msgstr "Grosse Plugins brauchen etwas Zeit. Zeigt dein Server einen Timeout-Fehler wie 504, warte eine Minute und lade diese Seite neu. Die Installation kann trotzdem fertig werden, das Ergebnis erscheint dann hier."
+
+msgid "Updates are not active: the constant MLAB_GIT_CONNECTOR_GITHUB_TOKEN is missing in wp-config.php."
+msgstr "Updates sind nicht aktiv: In wp-config.php fehlt die Konstante MLAB_GIT_CONNECTOR_GITHUB_TOKEN."

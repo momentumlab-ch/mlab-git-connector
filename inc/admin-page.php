@@ -59,7 +59,7 @@ function mlab_git_connector_handle_install() {
 		);
 	}
 
-	set_transient( mlab_git_connector_notice_key(), $notice, MINUTE_IN_SECONDS );
+	set_transient( mlab_git_connector_notice_key(), $notice, (int) mlab_git_connector_option( 'notice_ttl' ) );
 	wp_safe_redirect( admin_url( 'plugins.php?page=mlab-git-connector' ) );
 	exit;
 }

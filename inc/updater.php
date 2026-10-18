@@ -59,6 +59,6 @@ function mlab_git_connector_missing_token_notice(): void {
 	}
 	printf(
 		'<div class="notice notice-warning"><p>%s</p></div>',
-		esc_html__( 'Updates sind nicht aktiv: In wp-config.php fehlt die Konstante MLAB_GIT_CONNECTOR_GITHUB_TOKEN.', 'mlab-git-connector' )
+		esc_html__( 'Updates are not active: the constant MLAB_GIT_CONNECTOR_GITHUB_TOKEN is missing in wp-config.php.', 'mlab-git-connector' )
 	);
 }
